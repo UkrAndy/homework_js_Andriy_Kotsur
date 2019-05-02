@@ -27,7 +27,7 @@ class Banner {
     //     this.update = null
     // }
     this.update = setTimeout(() => {
-        this.rend = this.render(containerId)
+        this.rend = this.render(containerId) Тут треба змінювати зображення у this.img.src
     }, this.time);
     }
 }
@@ -36,7 +36,7 @@ window.onload = function(){
     "https://img.pac.ru/resorts/213084/265579/big/F3DC57597F0001010CF095BFAFBD84A9.jpg",
     "https://media1.fdncms.com/sacurrent/imager/u/original/20775955/san-antonio-skyline-_cropped-for-cmc-web.jpg",
     "https://www.tripsavvy.com/thmb/m3xj8Q2HDku_Ci176w_mJIvAk6w=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-494607942-nyc-58f120903df78cd3fc2759ad.jpg"]
-    let banner = new Banner("https://www.ridecj.com",3000,array)
+    let banner = new Banner("https://www.ridecj.com",3000,array) Тут треба передавати не array а елементи масиву (використайте спред оператор) ...array
     banner.render("container")
     banner.updateImg("container")
 }
