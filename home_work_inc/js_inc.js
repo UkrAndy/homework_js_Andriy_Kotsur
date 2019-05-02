@@ -1,31 +1,34 @@
-// class Rectangle {
-//     constructor (a, b) {
-//         this.a = a
-//     Object.defineProperty (this, "b", {
-//         get: function () {
-//             return b
-//         },
-//         set: function (value) {
-//             if (value >= 0)
-//                 b = value
-//             else
-//                 throw new Error ("err")
-//         }
-//     })
-//     this.b = b
-//     }
-//     getSquare(){
-//         return this.a* this.b
-//     }
-//     getPerimetre(){
-//         return (this.a+this.b)*2
-//     }
-// }
-// window.onload = function () {
-//     let rect = new Rectangle (4,-2)
-//     document.write(rect.getSquare())
-//     document.write(rect.getPerimetre())
-// }
+// Задача 1. Створити клас, що представляє прямокутник і має методи для знаходження площі, периметру та масштабування.
+class Rectangle {
+    constructor (a, b) {
+        this.a = a
+    Object.defineProperty (this, "b", {
+        get: function () {
+            return b
+        },
+        set: function (value) {
+            if (value >= 0)
+                b = value
+            else
+                throw new Error ("err")
+        }
+    })
+    this.b = b
+    }
+    getSquare(){
+        return this.a* this.b
+    }
+    getPerimetre(){
+        return (this.a+this.b)*2
+    }
+}
+window.onload = function () {
+    let rect = new Rectangle (4,-2)
+    document.write(rect.getSquare())
+    document.write(rect.getPerimetre())
+}
+
+// Задача 2. Створити клас Product, що представляє товар на складі
 class Product{
     constructor(name,count,price){
         this.name = name

@@ -1,3 +1,4 @@
+// Задача. Розробити клас «Банер» 
 class Banner {
     constructor(addressOnClick,time,...imgArr){
         this.imgArr = imgArr
