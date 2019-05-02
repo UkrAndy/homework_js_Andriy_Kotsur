@@ -32,7 +32,7 @@ window.onload = function () {
 class Product{
     constructor(name,count,price){
         this.name = name
-        this.getCount = function(){
+        this.getCount = function(){     Краще було б використати Object.defineProperty
             return count
         }
         this.setCount = function (value){
@@ -61,7 +61,7 @@ class Product{
         return this.count += value
     }
     reduceProduct(value){
-        if(this.count-value>=0)
+        if(this.count-value>=0)       Краще порівняти значення if(this.count<value)
             return this.count-=value
         else
             throw new Error('must be more')
